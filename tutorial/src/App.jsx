@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from'./Components/Navbar.jsx';
+import Users from'./Components/Class.jsx';
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
         </p>
       </header>
     </div>
+    <Users/>
     </>
   );
 }
