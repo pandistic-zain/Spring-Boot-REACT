@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar.jsx";
 import Users from "./Components/Class.jsx";
 import States from "./Components/States.jsx";
 import Props from "./Components/Props.jsx";
+import Form from "./Components/Form.jsx";
 function App() {
   return (
     <>
@@ -15,8 +16,9 @@ function App() {
           <States />
           <Props name={"React"} />
         </header>
-      </div>
-      <Users />
+        </div>
+        <Form/>
+        <Users />
     </>
   );
 }
