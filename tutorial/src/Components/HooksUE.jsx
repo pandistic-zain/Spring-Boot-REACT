@@ -9,7 +9,6 @@ useEffect(()=>{
 useEffect(()=>{
     console.error("useEffect For Counter")
 },[Counter])
-
   return (
     <div>
       <h1>Hellow From Hooks!</h1>
