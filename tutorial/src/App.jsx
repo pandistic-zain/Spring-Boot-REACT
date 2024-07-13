@@ -5,11 +5,12 @@ import States from "./Components/States.jsx";
 import Props from "./Components/Props.jsx";
 import Form from "./Components/Form.jsx";
 import HooksUE from "./Components/HooksUE.jsx";
+import HookUM from "./Components/HookUM.jsx";
 import DataTrans from "./Components/DataTrans.jsx";
 function App() {
-  function dataShower(q){
-    let name = "Zain Ul Abdeen"
-    name=q;
+  function dataShower(q) {
+    let name = "Zain Ul Abdeen";
+    name = q;
     console.warn(name);
     alert(name);
   }
@@ -23,9 +24,10 @@ function App() {
           <States />
           <Props name={"React"} />
           <HooksUE data={"ZAIN"} count={0} />
+          <HookUM/>
         </header>
       </div>
-      <DataTrans data = {dataShower}/>
+      <DataTrans data={dataShower} />
       <Form />
       <Users />
     </>
