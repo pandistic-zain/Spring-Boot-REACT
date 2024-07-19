@@ -3,6 +3,10 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import logo from "../Assets/images/logo.svg";
+import linkdin from "../Assets/images/nav-icon1.svg";
+import facebook from "../Assets/images/nav-icon2.svg";
+import insta from "../Assets/images/nav-icon3.svg";
 export default function NavBar() {
   const[activeLink  ,setActiveLink] = useState("home");
   const[scrolled  ,setScrolled] = useState(false);
@@ -27,7 +31,7 @@ function onUpdateActiveLink (value) {
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="#home">
-            <img src={""} alt="Logo" />
+            <img src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -42,15 +46,15 @@ function onUpdateActiveLink (value) {
               <div className="socia-icons">
                 <a href="#">
                   {" "}
-                  <img src={""} alt="Icon1" />
+                  <img src={linkdin} alt="Icon1" />
                 </a>
                 <a href="#">
                   {" "}
-                  <img src={""} alt="Icon3" />
+                  <img src={facebook} alt="Icon2" />
                 </a>
                 <a href="#">
                   {" "}
-                  <img src={""} alt="Icon2" />
+                  <img src={insta} alt="Icon3" />
                 </a>
               </div>
               <button
