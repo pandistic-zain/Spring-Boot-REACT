@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+
 import States from "./States.jsx";
 import Props from "./Props.jsx";
 import HooksUE from "./HooksUE.jsx";
