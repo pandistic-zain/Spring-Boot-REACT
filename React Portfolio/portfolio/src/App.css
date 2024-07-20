@@ -38,3 +38,18 @@ h1,h2,h3,h4,h5,h6{
   line-height: normal;
 }
 /* Navbar Styling */
+nav.navbar{
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: 0.3 ease-in-out;
+}
+nav.navbar.scrolled{
+  background-color: #121212;
+  padding: 0px 0;
+}
+nav.navbar a.navbar-brand{
+  width: 9%;
+}
