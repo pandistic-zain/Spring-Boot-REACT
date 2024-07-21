@@ -1,9 +1,9 @@
 import React from 'react'
-import Users from './Users'
+import DynamicRouting from './DynamicRouting'
 export default function Contact() {
   return (
     <>
-      <Users />
+      <DynamicRouting />
     </>
   )
 }

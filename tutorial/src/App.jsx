@@ -5,6 +5,7 @@ import Home from "./Components/Home.jsx";
 import About from "./Components/About.jsx";
 import Contact from "./Components/Contact.jsx";
 import PageNotFound from "./Components/PageNotFount.jsx";
+import Users from "./Components/Users.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PageNotFound />} />
+        <Route path="/Users/:id/:name" element={<Users/>} />
       </Routes>
     </>
   );
