@@ -4,6 +4,7 @@ import java.util.List;
 import org.pandistic.zain.em_project.ServiceLayer.EmployeeService;
 // import org.pandistic.zain.em_project.ServiceLayer.EmployeeServiceImplement;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+@CrossOrigin("http://localhost:3000")
 @RestController
 public class EmController {
     // List<Employees> employees = new ArrayList<>();
