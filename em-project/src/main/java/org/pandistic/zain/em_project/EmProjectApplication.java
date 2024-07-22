@@ -1,13 +1,12 @@
-package com.pandistic.zain.tutorail;
+package org.pandistic.zain.em_project;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TutorailApplication {
+public class EmProjectApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TutorailApplication.class, args);
+		SpringApplication.run(EmProjectApplication.class, args);
 	}
-
 }
