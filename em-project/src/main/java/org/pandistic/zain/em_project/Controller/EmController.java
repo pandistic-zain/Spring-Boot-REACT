@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -38,5 +39,14 @@ public class EmController {
         }
         return "ID Not Found";
     }
-
+    @PutMapping("/employees/{id}")
+    public String UpdateEmployee(@PathVariable Long id, @RequestBody Employees emp) {
+        String result = empservice.UpdateEmployee(id, emp);
+        if (result.equals("Updated")){
+            return "Updated Successfully";
+        }
+        return "ID Not Found";
+    }   
 }
+
+
