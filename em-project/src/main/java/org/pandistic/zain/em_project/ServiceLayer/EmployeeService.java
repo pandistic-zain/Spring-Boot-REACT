@@ -12,4 +12,6 @@ public interface EmployeeService {
     boolean DeleteEmployee(long id);
 
     String UpdateEmployee(long id, Employees emp);
+
+    Employees GetEmployeeById(long id);
 }

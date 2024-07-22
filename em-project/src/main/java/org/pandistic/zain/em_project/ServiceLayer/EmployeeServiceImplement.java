@@ -54,4 +54,12 @@ public class EmployeeServiceImplement implements EmployeeService {
         employeeRepository.save(newEntity);
         return "Updated";
     }
+
+    @Override
+    public Employees GetEmployeeById(long id) {
+        EmployeeEntity employeeEntity = employeeRepository.findById(id).get();
+        Employees employee = new Employees();
+        BeanUtils.copyProperties(employeeEntity, employee);
+        return employee;
+    }
 }

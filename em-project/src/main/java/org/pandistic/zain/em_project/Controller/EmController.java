@@ -24,6 +24,11 @@ public class EmController {
 
         return empservice.GetEmployees();
     }
+    @GetMapping("/employees/{id}")
+    public Employees getEmployeeById(@PathVariable Long id) {
+
+        return empservice.GetEmployeeById(id);
+    }
 
     @PostMapping("/employees")
     public String addEmployee(@RequestBody Employees emp) {
