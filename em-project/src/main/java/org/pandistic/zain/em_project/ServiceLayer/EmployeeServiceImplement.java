@@ -62,4 +62,16 @@ public class EmployeeServiceImplement implements EmployeeService {
         BeanUtils.copyProperties(employeeEntity, employee);
         return employee;
     }
+
+    @Override
+    public List<Employees> FindByName(String name) {
+        List<EmployeeEntity> employeeEntities = employeeRepository.findByName(name);
+        List<Employees> employees = new ArrayList<>();
+        for (EmployeeEntity employeeEntity : employeeEntities) {
+            Employees employee = new Employees();
+            BeanUtils.copyProperties(employeeEntity, employee);
+            employees.add(employee);
+        }
+        return employees;
+    }
 }
