@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.pandistic.zain.em_project.Controller.Employees;
-import org.pandistic.zain.em_project.Entity.EmployeeEntity;
-import org.pandistic.zain.em_project.Repository.EmployeeRepository;
+import org.pandistic.zain.em_project.DaoLayer.Entity.EmployeeEntity;
+import org.pandistic.zain.em_project.DaoLayer.Repository.EmployeeRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

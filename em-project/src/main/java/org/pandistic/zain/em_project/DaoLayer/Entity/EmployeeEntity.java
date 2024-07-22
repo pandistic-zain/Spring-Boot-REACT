@@ -1,4 +1,4 @@
-package org.pandistic.zain.em_project.Entity;
+package org.pandistic.zain.em_project.DaoLayer.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

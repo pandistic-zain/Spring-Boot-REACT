@@ -1,6 +1,6 @@
-package org.pandistic.zain.em_project.Repository;
+package org.pandistic.zain.em_project.DaoLayer.Repository;
 
-import org.pandistic.zain.em_project.Entity.EmployeeEntity;
+import org.pandistic.zain.em_project.DaoLayer.Entity.EmployeeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
