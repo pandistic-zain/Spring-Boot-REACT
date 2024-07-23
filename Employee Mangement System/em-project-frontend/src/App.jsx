@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import NavBar from './Components/NavBar';
-import Loader from './Components/Loader';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import NavBar from "./Components/NavBar";
+import Loader from "./Components/Loader";
+import Tables from "./Components/Tables";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -15,10 +16,12 @@ function App() {
 
   return (
     <>
-      {loading ? <Loader /> : (
+      {loading ? (
+        <Loader />
+      ) : (
         <>
           <NavBar />
-          <h1>Hello Employee Management System</h1>
+          <Tables />
         </>
       )}
     </>

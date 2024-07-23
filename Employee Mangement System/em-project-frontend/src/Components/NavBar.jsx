@@ -19,7 +19,7 @@ export default function NavBar() {
       <Navbar expand="lg" className=" custom-navbar">
         <Container fluid>
           <span className="navbar-logo"></span>
-          <Navbar.Brand href="#" className="navbar-brand">Navbar scroll</Navbar.Brand>
+          <Navbar.Brand href="#" className="navbar-brand">Manager</Navbar.Brand>
           
           {/* Custom Toggler */}
           <div onClick={handleToggle} className={`toggle ${isToggled ? "open" : ""}`} >
@@ -30,25 +30,12 @@ export default function NavBar() {
           
           <Navbar.Collapse id="navbarScroll" className={isToggled ? "show" : ""}>
             <Nav
-              className="me-auto my-2 my-lg-0 custom-nav"
+              className="me-auto ms-auto my-auto my-lg-0 custom-nav"
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="#action1" className="nav-link">Home</Nav.Link>
-              <Nav.Link href="#action2" className="nav-link">Link</Nav.Link>
-              <NavDropdown title="Link" id="navbarScrollingDropdown" className="nav-dropdown">
-                <NavDropdown.Item href="#action3" className="dropdown-item">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#" disabled className="nav-link-disabled">
-                Link
-              </Nav.Link>
+              <Nav.Link href="#action1" className="nav-link">Add Employee</Nav.Link>
+              <Nav.Link href="#action2" className="nav-link">Update Employee</Nav.Link>
             </Nav>
             <Form className="d-flex search-form">
               <Form.Control
