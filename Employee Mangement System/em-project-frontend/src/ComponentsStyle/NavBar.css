@@ -1,6 +1,98 @@
-
-.navbar {
+/* General navbar styling */
+.custom-navbar {
   background: transparent !important; 
   margin: auto;
   width: 100%;
+}
+
+/* Logo styling */
+.navbar-logo {
+  background-image: url("../Assets/navLogo.svg");
+  height: 50px;
+  width: 50px;
+  background-size: cover; 
+  display: inline-block; 
+}
+
+/* Brand styling */
+.navbar-brand {
+  margin-left: 25px;
+  font-weight: 700;
+  color: #023800 !important;
+  font-size: 2.5rem;
+}
+.navbar-brand:hover {
+  color: #023800 !important;
+}
+
+/* Customize the navbar items */
+.navbar-nav {
+  margin-left: 50px ;
+  text-align: center;
+}
+
+/* Customize the navbar-toggler button */
+.navbar-toggler {
+  margin-right: 30px;
+  position: relative; /* For custom toggle positioning */
+}
+/* Navbar collapse styling */
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+/* Navigation links styling */
+.nav-link {
+  color: #023800 !important;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #0056b3;
+}
+
+/* Disabled link styling */
+.nav-link-disabled {
+  color: #6c757d;
+}
+.nav-link.active {
+  color: #28a745 ; /* Change text color when active */
+  font-weight: bold; /* Make text bold */
+}
+
+
+/* Dropdown styling */
+.nav-dropdown {
+  color: #007bff;
+}
+
+.dropdown-item {
+  color: #333;
+}
+
+.dropdown-item:hover {
+  background-color: #96e8b0 !important;
+  color: #05570b !important;
+  font-weight: 500;
+}
+
+/* Search form styling */
+.search-form {
+  margin-left: auto;
+}
+
+.search-input {
+  border-radius: 0;
+}
+
+.search-button {
+  border-radius: 0;
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.search-button:hover {
+  background-color: #28a745;
+  color: #fff;
 }
