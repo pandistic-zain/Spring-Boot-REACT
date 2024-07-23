@@ -1,9 +1,51 @@
-body {
-    font-family: 'Centra', sans-serif !important;
-    background-image: url('./Assets/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    font-weight: 400;
+/* NavBar.css */
+
+/* Customize the navbar */
+.navbar {
+    background: transparent !important; /* Example background color */
+    border-bottom: 2px solid #121212;
+    border-right: 2px solid #121212;
+    border-left: 2px solid #121212;
+    border-radius: 10px;
   }
+  
+  /* Customize the navbar brand */
+  .navbar-brand {
+    color: #007bff; /* Example text color */
+    font-size: 1.5rem; /* Example font size */
+  }
+  
+  .navbar-brand:hover {
+    color: #0056b3; /* Example hover color */
+  }
+  
+  /* Customize the navbar toggler */
+  .navbar-toggler {
+    border-color: #007bff; /* Example border color */
+  }
+  
+  /* .navbar-toggler-icon {
+    background-image: url("path/to/your/icon.svg"); /* Example custom icon 
+  } 
+  */
+  
+  /* Customize the collapse */
+  .navbar-collapse {
+    justify-content: flex-end; /* Align items to the right */
+  }
+  
+  /* Customize the form */
+  .form-control {
+    border-radius: 0; /* Example border radius */
+  }
+  
+  .btn-outline-success {
+    color: #28a745; /* Example text color */
+    border-color: #28a745; /* Example border color */
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #28a745; /* Example background color on hover */
+    color: #fff; /* Example text color on hover */
+  }
+  

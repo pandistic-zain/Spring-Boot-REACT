@@ -1,3 +1,8 @@
+.bg-1{
+  background-color: #fff !important;
+  height: 100vh;
+  width: 100%;
+}
 .socket {
     width: 200px;
     height: 200px;

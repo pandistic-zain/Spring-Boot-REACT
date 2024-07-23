@@ -3,7 +3,7 @@ import '../ComponentsStyle/Loader.css';
 export default function Loader() {
   return (
     <>
-      
+      <div className="bg-1">
 		<div className="socket">
 			<div className="gel center-gel">
 				<div className="hex-brick h1"></div>
@@ -194,7 +194,7 @@ export default function Loader() {
 			</div>
 			
 		</div>
-	
+		</div>
     </>
   );
 }
