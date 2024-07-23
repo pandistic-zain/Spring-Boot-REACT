@@ -38,10 +38,7 @@
 /* Customize the navbar-toggler button */
 .navbar-toggler {
   margin-right: 50px;
-  border: 2px solid #023800; /* Set the default border color */
   position: relative; /* For custom toggle positioning */
-  background-color: transparent; /* Ensure the background is transparent */
-  box-shadow: none; /* Remove any default shadow */
 }
 
 #checkbox {
