@@ -1,13 +1,15 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../ComponentsStyle/NavBar.css';
+import "../ComponentsStyle/NavBar.css";
 
 export default function NavBar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">Navbar</a>
+          <span className="navbar-logo"></span>
+          <a className="navbar-brand" href="#">
+            Navbar
+          </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -18,8 +20,20 @@ export default function NavBar() {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-          </button>
+         
+
           <div className="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">
+                Home
+              </a>
+              <a class="nav-link" href="#">
+                Features
+              </a>
+              <a class="nav-link" href="#">
+                Pricing
+              </a>
+            </div>
             <form className="d-flex ms-auto" role="search">
               <input
                 className="form-control me-2"
@@ -32,6 +46,7 @@ export default function NavBar() {
               </button>
             </form>
           </div>
+          </button>
         </div>
       </nav>
     </>

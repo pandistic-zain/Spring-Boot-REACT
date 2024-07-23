@@ -1,8 +1,9 @@
 import React from "react";
-
+import '../ComponentsStyle/Tables.css';
 export default function Tables() {
   return (
     <>
+    <div className="container">
       <table class="table">
         <thead>
           <tr>
@@ -32,6 +33,7 @@ export default function Tables() {
           </tr>
         </tbody>
       </table>
+      </div>
     </>
   );
 }

@@ -1,27 +1,35 @@
-/* NavBar.css */
 
-/* Customize the navbar */
 .navbar {
-    background: transparent !important; /* Example background color */
-    border-bottom: 2px solid #121212;
-    border-right: 2px solid #121212;
-    border-left: 2px solid #121212;
-    border-radius: 10px;
-  }
-  
-  /* Customize the navbar brand */
+    background: transparent !important; 
+    margin: auto;
+    width: 100%;
+    /* padding-left: 10px !important; */
+}
+.container-fluid{
+    margin-left: 50px !important;
+}
+ .navbar-logo {
+     background-image: url("../Assets/navLogo.svg") ;
+     height: 50px; 
+     width: 50px; 
+
+  } 
+
   .navbar-brand {
-    color: #007bff; /* Example text color */
-    font-size: 1.5rem; /* Example font size */
+    margin-left: 25px ;
+    color: #09ff00; 
+    font-size: 1.5rem; 
   }
   
   .navbar-brand:hover {
-    color: #0056b3; /* Example hover color */
+    color: #0056b3; 
   }
-  
-  /* Customize the navbar toggler */
+  .navbar-nav{
+    margin-left: 50px !important;
+    text-align: center;
+  }
   .navbar-toggler {
-    border-color: #007bff; /* Example border color */
+    border-color: #007bff; 
   }
   
   /* .navbar-toggler-icon {
@@ -29,23 +37,23 @@
   } 
   */
   
-  /* Customize the collapse */
+ 
   .navbar-collapse {
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-end; 
   }
   
-  /* Customize the form */
+ 
   .form-control {
-    border-radius: 0; /* Example border radius */
+    border-radius: 0; 
   }
   
   .btn-outline-success {
-    color: #28a745; /* Example text color */
-    border-color: #28a745; /* Example border color */
+    color: #28a745; 
+    border-color: #28a745; 
   }
   
   .btn-outline-success:hover {
-    background-color: #28a745; /* Example background color on hover */
-    color: #fff; /* Example text color on hover */
+    background-color: #28a745; 
+    color: #fff; 
   }
   
