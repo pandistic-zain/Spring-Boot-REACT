@@ -20,8 +20,9 @@
 /* Customize the navbar brand */
 .navbar-brand {
   margin-left: 25px;
+  font-weight: 700;
   color: #023800;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .navbar-brand:hover {
@@ -36,26 +37,11 @@
 
 /* Customize the navbar-toggler button */
 .navbar-toggler {
+  margin-right: 50px;
   border: 2px solid #023800; /* Set the default border color */
   position: relative; /* For custom toggle positioning */
   background-color: transparent; /* Ensure the background is transparent */
   box-shadow: none; /* Remove any default shadow */
-}
-
-/* Change border color when toggler is focused */
-.navbar-toggler:focus {
-  outline: none; /* Remove the default focus outline */
-  border-color: #007bff; /* Change to your desired color when focused */
-}
-
-/* Change border color when toggler is active */
-.navbar-toggler:active {
-  border-color: #0056b3; /* Change to your desired color when active */
-}
-
-/* Change border color when toggler is in the collapsed state */
-.navbar-toggler.collapsed {
-  border-color: #023800; /* Set the border color for collapsed state */
 }
 
 #checkbox {
@@ -122,4 +108,8 @@
 .btn-outline-success:hover {
   background-color: #28a745;
   color: #fff;
+}
+.nav-link.active {
+  color: #28a745 !important; /* Change text color when active */
+  font-weight: bold; /* Make text bold */
 }
