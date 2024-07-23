@@ -7,10 +7,9 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate an asynchronous operation
     setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust the delay as needed
+    }, 3000);
   }, []);
 
   return (
