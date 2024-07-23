@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -8,15 +8,27 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../ComponentsStyle/NavBar.css';
 
 export default function NavBar() {
+  const [isToggled, setIsToggled] = useState(false);
+
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+  };
+
   return (
     <>
       <Navbar expand="lg" className=" custom-navbar">
         <Container fluid>
           <span className="navbar-logo"></span>
           <Navbar.Brand href="#" className="navbar-brand">Navbar scroll</Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" className="navbar-toggler" />
           
-          <Navbar.Collapse id="navbarScroll" className="navbar-collapse">
+          {/* Custom Toggler */}
+          <div onClick={handleToggle} className={`toggle ${isToggled ? "open" : ""}`} >
+            <div className="bars" id="bar1"></div>
+            <div className="bars" id="bar2"></div>
+            <div className="bars" id="bar3"></div>
+          </div>
+          
+          <Navbar.Collapse id="navbarScroll" className={isToggled ? "show" : ""}>
             <Nav
               className="me-auto my-2 my-lg-0 custom-nav"
               style={{ maxHeight: '100px' }}
@@ -26,11 +38,11 @@ export default function NavBar() {
               <Nav.Link href="#action2" className="nav-link">Link</Nav.Link>
               <NavDropdown title="Link" id="navbarScrollingDropdown" className="nav-dropdown">
                 <NavDropdown.Item href="#action3" className="dropdown-item">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4" className="dropdown-item">
+                <NavDropdown.Item href="#action4">
                   Another action
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5" className="dropdown-item">
+                <NavDropdown.Item href="#action5">
                   Something else here
                 </NavDropdown.Item>
               </NavDropdown>
