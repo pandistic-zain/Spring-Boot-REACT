@@ -1,5 +1,5 @@
 import React from "react";
-import '../ComponentsStyle/AddEmployee.css';
+import '../ComponentsStyle/Edit-AddEmployee.css';
 
 const AddEmployee = () => {
   return (
