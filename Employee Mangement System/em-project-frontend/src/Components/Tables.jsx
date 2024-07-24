@@ -1,6 +1,15 @@
 import React from "react";
 import "../ComponentsStyle/Tables.css";
+import { useNavigate } from 'react-router-dom';
 export default function Tables() {
+  const navigate = useNavigate();
+
+  const handleEditClick = () => {
+    navigate('/updateemployee'); 
+  };
+  const handleDeleteClick = () => {
+
+  };
   return (
     <>
       <div className="container">
@@ -33,10 +42,15 @@ export default function Tables() {
                     type="button"
                     className="btn btn-danger"
                     style={{ marginRight: 10 }}
+                    onClick={handleDeleteClick}
                   >
                     Delete
                   </button>
-                  <button type="button" className="btn btn-warning">
+                  <button
+                    type="button"
+                    className="btn btn-warning"
+                    onClick={handleEditClick}
+                  >
                     Edit
                   </button>
                 </div>
