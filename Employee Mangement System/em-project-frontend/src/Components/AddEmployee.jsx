@@ -1,12 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../ComponentsStyle/Edit-AddEmployee.css";
 
 const AddEmployee = () => {
+  const navigate = useNavigate();
+  function handleBackClick(){
+    navigate('/')
+
+  }
   return (
     <div className="login-container">
       <div className="login-box">
         <div className="button-name">
-          <button>
+          <button onClick={handleBackClick}>
             <span className="arrow-back"></span>
           </button>
           <h1>Add Employee</h1>
