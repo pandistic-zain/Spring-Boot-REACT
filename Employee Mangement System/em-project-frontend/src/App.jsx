@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import NavBar from "./Components/NavBar";
-import Loader from "./Components/Loader";
-import Tables from "./Components/Tables";
+import { Route, Routes } from "react-router-dom";
 
+import Loader from "./Components/Loader";
+import FrontPage from "./Components/FrontPage";
+import AddEmployee from "./Components/AddEmployee";
+import UpdateEmployee from "./Components/UpdateEmployee";
+ 
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -20,8 +23,13 @@ function App() {
         <Loader />
       ) : (
         <>
-          <NavBar />
-          <Tables />
+        <Routes>
+          <Route exact path="/" element =  {<FrontPage/>}></Route>
+          <Route path ="/addemployee" element  = {<AddEmployee/>}></Route>
+          <Route path ="/updateemployee" element  = {<UpdateEmployee/>}></Route>
+        </Routes>
+
+          
         </>
       )}
     </>
