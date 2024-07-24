@@ -28,12 +28,24 @@ export default function Tables() {
     navigate("/updateemployee");
   };
 
-  const handleDeleteClick = (id) => {
-    // Implement delete functionality here
-    
-    console.log(`Delete employee with id: ${id}`);
-  };
+  const handleDeleteClick = (e, id) => {
+    e.preventDefault();
+    setTimeout(()=>{
+      
+    EmployeeServices.deleteEmployee(id).then(() => {
+      if (employees) {
+        setEmployees((prevElement) => {
+          return prevElement.filter((employee) => employee.id !== id);
+        });
+      }
+    },1000);
 
+      window.location.reload();
+
+      console.log(`Delete employee with id: ${id}`);
+
+    });
+  };
   return (
     <div className="container">
       <table className="table">
@@ -73,7 +85,7 @@ export default function Tables() {
                       type="button"
                       className="btn btn-danger"
                       style={{ marginRight: 10 }}
-                      onClick={() => handleDeleteClick(employee.id)}
+                      onClick={(e) => handleDeleteClick(e, employee.id)}
                     >
                       Delete
                     </button>
