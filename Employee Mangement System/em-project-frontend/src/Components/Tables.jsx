@@ -48,7 +48,7 @@ export default function Tables() {
                   </button>
                   <button
                     type="button"
-                    className="btn btn-warning"
+                    className="btn btn-outline-info"
                     onClick={handleEditClick}
                   >
                     Edit
