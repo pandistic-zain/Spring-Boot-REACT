@@ -3,6 +3,54 @@
   justify-content: center;
   align-items: center;
   height: 100vh; 
+  width: auto;
+}
+
+.arrow-back {
+  background-image: url("../Assets/arrowBack.svg");
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.button-name {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 10px; 
+}
+
+
+.button-name button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  transition: background 0.3s, box-shadow 0.3s; 
+}
+
+.button-name button:hover {
+  background: #03f40f;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03f40f,
+              0 0 25px #03f40f,
+              0 0 50px #03f40f,
+              0 0 100px #03f40f;
+}
+
+.button-name h1 {
+  font-size: 1.3rem;
+  margin: 0; 
+  color: #000000;
+  font-weight: bold;
+  letter-spacing: 1px;
+  filter: drop-shadow(0 0 10px #03f40f);
 }
 
 .login-box {
@@ -16,18 +64,6 @@
   flex-direction: column;
   align-items: center;
 }
-
-.login-box h1 {
-  font-size: 1.5rem; 
-  margin-top: 2px; 
-  margin-bottom: 20px !important; 
-  color: #000000; 
-  text-align: center; 
-  font-weight: bold; 
-  letter-spacing: 1px;
-  filter: drop-shadow(0 0 10px #03f40f); 
-}
-
 .login-box .user-box {
   margin-top: 20px;
   position: relative;

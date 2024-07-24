@@ -5,7 +5,10 @@ const AddEmployee = () => {
   return (
     <div className="login-container">
       <div className="login-box">
-        <h1>Add Employee</h1>
+      <div className="button-name">
+        <button><span className="arrow-back"></span></button>
+      <h1>Add Employee</h1>
+      </div>
         <form>
           <div className="user-box">
             <label htmlFor="name">Name</label>
