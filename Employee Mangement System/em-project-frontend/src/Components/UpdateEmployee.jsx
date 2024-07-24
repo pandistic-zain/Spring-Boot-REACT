@@ -12,7 +12,7 @@ const UpdateEmployee = () => {
         </div>
         <form>
           <div className="user-box">
-            <input type="text" name="" required="" />
+            <input type="number" name="" required="" />
             <label style={{ transform: "translateX(90%) translateY(-50%)" }}>
               ID
             </label>
@@ -22,7 +22,6 @@ const UpdateEmployee = () => {
             <label>Name</label>
           </div>
           <div className="user-box">
-            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
@@ -30,9 +29,9 @@ const UpdateEmployee = () => {
               required
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             />
+            <label htmlFor="email">Email</label>
           </div>
           <div className="user-box">
-            <label htmlFor="phone">Phone</label>
             <input
               type="tel"
               id="phone"
@@ -40,6 +39,7 @@ const UpdateEmployee = () => {
               required
               pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
             />
+            <label htmlFor="phone">Phone</label>
           </div>
           <center>
             <a href="/">

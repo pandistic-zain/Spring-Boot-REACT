@@ -5,17 +5,18 @@ const AddEmployee = () => {
   return (
     <div className="login-container">
       <div className="login-box">
-      <div className="button-name">
-        <button><span className="arrow-back"></span></button>
-      <h1>Add Employee</h1>
-      </div>
+        <div className="button-name">
+          <button>
+            <span className="arrow-back"></span>
+          </button>
+          <h1>Add Employee</h1>
+        </div>
         <form>
           <div className="user-box">
-            <label htmlFor="name">Name</label>
             <input type="text" id="name" name="name" required />
+            <label htmlFor="name">Name</label>
           </div>
           <div className="user-box">
-            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
@@ -23,9 +24,9 @@ const AddEmployee = () => {
               required
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             />
+            <label htmlFor="email">Email</label>
           </div>
           <div className="user-box">
-            <label htmlFor="phone">Phone</label>
             <input
               type="tel"
               id="phone"
@@ -33,6 +34,7 @@ const AddEmployee = () => {
               required
               pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
             />
+            <label htmlFor="phone">Phone</label>
           </div>
           <center>
             <a href="/">
