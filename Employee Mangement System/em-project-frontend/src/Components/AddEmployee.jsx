@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../ComponentsStyle/Edit-AddEmployee.css";
-
+import EmployeeServices from "../Services/EmployeeServices";
 const AddEmployee = () => {
   const [employee, addEmployee] = useState({
     id: "",
@@ -9,6 +9,7 @@ const AddEmployee = () => {
     email: "",
     phone: "",
   });
+
   const handleChange = (e) => {
     const value = e.target.value;
     addEmployee({ ...employee, [e.target.name]: value });
@@ -17,6 +18,16 @@ const AddEmployee = () => {
   function handleBackClick() {
     navigate("/");
   }
+  const handleSaveEmployee = (e) => {
+    e.preventDefault();
+    EmployeeServices.saveEmployee(employee)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
     <div className="login-container">
       <div className="login-box">
@@ -63,7 +74,7 @@ const AddEmployee = () => {
             <label htmlFor="phone">Phone</label>
           </div>
           <center>
-            <a href="/">
+            <a href="/" onClick={handleSaveEmployee}>
               ADD Employee
               <span></span>
             </a>
