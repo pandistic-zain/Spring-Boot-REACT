@@ -30,22 +30,19 @@ export default function Tables() {
 
   const handleDeleteClick = (e, id) => {
     e.preventDefault();
-    setTimeout(()=>{
-      
+  
+    // Call the delete service and update the state upon success
     EmployeeServices.deleteEmployee(id).then(() => {
-      if (employees) {
-        setEmployees((prevElement) => {
-          return prevElement.filter((employee) => employee.id !== id);
-        });
-      }
-    },1000);
-
-      window.location.reload();
-
+      // Update the state to remove the deleted employee
+      setEmployees((prevEmployees) => 
+        prevEmployees.filter((employee) => employee.id !== id)
+      );
       console.log(`Delete employee with id: ${id}`);
-
+    }).catch(error => {
+      console.error("Error deleting employee:", error);
     });
   };
+  
   return (
     <div className="container">
       <table className="table">
