@@ -23,6 +23,7 @@ const AddEmployee = () => {
     EmployeeServices.saveEmployee(employee)
       .then((response) => {
         console.log(response.data);
+        navigate("/");
       })
       .catch((error) => {
         console.error(error);
@@ -74,7 +75,7 @@ const AddEmployee = () => {
             <label htmlFor="phone">Phone</label>
           </div>
           <center>
-            <a href="/" onClick={handleSaveEmployee}>
+            <a onClick={handleSaveEmployee}>
               ADD Employee
               <span></span>
             </a>
