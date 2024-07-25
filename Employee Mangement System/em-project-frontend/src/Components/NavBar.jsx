@@ -11,7 +11,7 @@ import EmployeeServices from "../Services/EmployeeServices";
 export default function NavBar() {
   const [isToggled, setIsToggled] = useState(false);
   const [name, setName] = useState('');
-    const [employee, setEmployee] = useState(null);
+  const [employee, setEmployee] = useState(null);
 
   const handleToggle = () => {
     setIsToggled(!isToggled);
@@ -56,7 +56,7 @@ export default function NavBar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link as={Link} to="/addemployee" className="nav-link">
+              <Nav.Link as={Link} to="/addemployee" className="nav-link" >
                 Add Employee
               </Nav.Link>
             </Nav>
