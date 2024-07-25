@@ -1,37 +1,44 @@
-import {React,useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "../ComponentsStyle/Edit-AddEmployee.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import EmployeeServices from "../Services/EmployeeServices"; // Adjust the import path as needed
+
 const UpdateEmployee = () => {
-  const {id} = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
-  const [employee, setEmployees] = useState({
+  const [employee, setEmployee] = useState({
     id: id,
     name: "",
     email: "",
     phone: "",
   });
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await EmployeeServices.getEmployeeById(employee.id);
-        setEmployees(response.data);
+        console.log(`Fetching data for employee with id: ${id}`); // Debugging line
+        const response = await EmployeeServices.getEmployeeById(id);
+        setEmployee(response.data);
       } catch (error) {
         console.error(error);
       }
     };
     fetchData();
-  }, []);
-  const handleChange = (e) => {
-    const value = e.target.value;
-    addEmployee({ ...employee, [e.target.name]: value });
-  };
-  function handleBackClick(){
-    navigate('/')
+  }, [id]);
 
-  }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setEmployee((prevEmployee) => ({ ...prevEmployee, [name]: value }));
+  };
+
+  const handleBackClick = () => {
+    navigate('/');
+  };
+
   const handleUpdateEmployee = (e) => {
     e.preventDefault();
-    EmployeeServices.UpdateEmployee(id,employee)
+    console.log(`Updating employee with id: ${id}`); // Debugging line
+    EmployeeServices.updateEmployee(id, employee)
       .then((response) => {
         console.log(response.data);
         navigate("/");
@@ -40,6 +47,7 @@ const UpdateEmployee = () => {
         console.error(error);
       });
   };
+
   return (
     <div className="login-container">
       <div className="login-box">
@@ -51,14 +59,25 @@ const UpdateEmployee = () => {
         </div>
         <form>
           <div className="user-box">
-            <input type="number" name="" required="" 
-             value={employee.id} disabled/>
+            <input
+              type="number"
+              name="id"
+              required
+              value={employee.id}
+              disabled
+            />
             <label style={{ transform: "translateX(90%) translateY(-50%)" }}>
               ID
             </label>
           </div>
           <div className="user-box">
-            <input type="text" name="" required=""  value={employee.name} onChange={(e) => handleChange(e)}/>
+            <input
+              type="text"
+              name="name"
+              required
+              value={employee.name}
+              onChange={handleChange}
+            />
             <label>Name</label>
           </div>
           <div className="user-box">
@@ -69,7 +88,7 @@ const UpdateEmployee = () => {
               required
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               value={employee.email}
-              onChange={(e) => handleChange(e)}
+              onChange={handleChange}
             />
             <label htmlFor="email">Email</label>
           </div>
@@ -79,9 +98,8 @@ const UpdateEmployee = () => {
               id="phone"
               name="phone"
               required
-              pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
               value={employee.phone}
-              onChange={(e) => handleChange(e)}
+              onChange={handleChange}
             />
             <label htmlFor="phone">Phone</label>
           </div>

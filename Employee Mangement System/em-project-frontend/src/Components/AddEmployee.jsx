@@ -69,7 +69,6 @@ const AddEmployee = () => {
               name="phone"
               value={employee.phone}
               required
-              pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
               onChange={(e) => handleChange(e)}
             />
             <label htmlFor="phone">Phone</label>

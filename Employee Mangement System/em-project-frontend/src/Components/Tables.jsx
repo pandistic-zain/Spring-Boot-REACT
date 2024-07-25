@@ -89,7 +89,7 @@ export default function Tables() {
                     <button
                       type="button"
                       className="btn btn-outline-info"
-                      onClick={(e)=> handleEditClick(e, employee)}
+                      onClick={(e)=> handleEditClick(e, employee.id)}
                     >
                       Edit
                     </button>
