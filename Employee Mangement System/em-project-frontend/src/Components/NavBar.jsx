@@ -10,23 +10,22 @@ import EmployeeServices from "../Services/EmployeeServices";
 
 export default function NavBar() {
   const [isToggled, setIsToggled] = useState(false);
-  const [name, setName] = useState('');
-  const [employee, setEmployee] = useState(null);
+  // const [name, setName] = useState('');
+  // const [employee, setEmployee] = useState(null);
 
   const handleToggle = () => {
     setIsToggled(!isToggled);
   };
-  const handleSearch = (e) => {
-    e.preventDefault();
-    EmployeeServices.getEmployeeByName(name)
-        .then(response => {
-            setEmployee(response.data);
-        })
-        .catch(error => {
-            console.error("There was an error fetching the employee!", error);
-        });
-}
-
+  //   const handleSearch = (e) => {
+  //     e.preventDefault();
+  //     EmployeeServices.getEmployeeByName(name)
+  //         .then(response => {
+  //             setEmployee(response.data);
+  //         })
+  //         .catch(error => {
+  //             console.error("There was an error fetching the employee!", error);
+  //         });
+  // }
 
   return (
     <>
@@ -56,22 +55,25 @@ export default function NavBar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link as={Link} to="/addemployee" className="nav-link" >
+              <Nav.Link as={Link} to="/addemployee" className="nav-link">
                 Add Employee
               </Nav.Link>
             </Nav>
-            <Form className="d-flex search-form" onSubmit={handleSearch}>
-                <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2 search-input"
-                    aria-label="Search"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                />
-                <Button variant="outline-success" className="search-button" type="submit">
-                    Search
-                </Button>
+            <Form className="d-flex search-form">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2 search-input"
+                aria-label="Search"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <Button
+                variant="outline-success"
+                className="search-button"
+                type="submit"
+              >
+                Search
+              </Button>
             </Form>
           </Navbar.Collapse>
         </Container>
