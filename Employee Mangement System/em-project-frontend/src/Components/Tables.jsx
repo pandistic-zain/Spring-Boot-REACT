@@ -30,8 +30,6 @@ export default function Tables() {
 
   const handleDeleteClick = (e, id) => {
     e.preventDefault();
-  
-    // Call the delete service and update the state upon success
     EmployeeServices.deleteEmployee(id).then(() => {
       // Update the state to remove the deleted employee
       setEmployees((prevEmployees) => 
