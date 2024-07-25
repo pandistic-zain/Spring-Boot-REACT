@@ -24,8 +24,8 @@ export default function Tables() {
 
   const navigate = useNavigate();
 
-  const handleEditClick = () => {
-    navigate("/updateemployee");
+  const handleEditClick = (e, id) => {
+    navigate(`/updateemployee/${id}`);
   };
 
   const handleDeleteClick = (e, id) => {
@@ -89,7 +89,7 @@ export default function Tables() {
                     <button
                       type="button"
                       className="btn btn-outline-info"
-                      onClick={handleEditClick}
+                      onClick={(e)=> handleEditClick(e, employee)}
                     >
                       Edit
                     </button>

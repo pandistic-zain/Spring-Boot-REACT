@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../ComponentsStyle/Edit-AddEmployee.css";
 import EmployeeServices from "../Services/EmployeeServices";
 const AddEmployee = () => {
@@ -75,10 +75,10 @@ const AddEmployee = () => {
             <label htmlFor="phone">Phone</label>
           </div>
           <center>
-            <a onClick={handleSaveEmployee}>
+            <Link onClick={handleSaveEmployee}>
               ADD Employee
               <span></span>
-            </a>
+            </Link>
           </center>
         </form>
       </div>
