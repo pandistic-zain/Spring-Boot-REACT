@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import "../ComponentsStyle/Tables.css";
 import { useNavigate } from "react-router-dom";
 import EmployeeServices from "../Services/EmployeeServices";
-import Loader from "../Components/Loader";
+import Loader2 from "../Components/Loader2";
 
 export default function Tables() {
   const [loading, setLoading] = useState(false);
@@ -54,7 +54,7 @@ export default function Tables() {
           </tr>
         </thead>
         {loading ? (
-          <Loader />
+          <Loader2 />
         ) : (
           <tbody>
             {employees.map((employee) => (
