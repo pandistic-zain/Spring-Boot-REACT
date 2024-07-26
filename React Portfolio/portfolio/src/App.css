@@ -218,19 +218,28 @@ h1, h2, h3, h4, h5, h6 {
 .toggle.open {
   transform: rotate(-90deg);
 }
-
 /* Media query to show custom toggler only on smaller screens */
 @media (max-width: 991px) {
   .toggle {
-    display: flex; /* Show on small screens */
+    display: flex; 
   }
   .navbar-toggler {
-    display: none; /* Hide default toggler on small screens */
+    display: none; 
   }
 }
-/* Navbar collapse styling */
+
 .navbar-collapse {
   justify-content: flex-start;
 }
 /* Navbar Styling Finish */
 
+
+/* Banner Styling Start */
+.banner{
+  margin-top: 0;
+  padding: 260px 0px 100px 0px;
+  background-image: url('./Assets/images/banner-bg.png');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
