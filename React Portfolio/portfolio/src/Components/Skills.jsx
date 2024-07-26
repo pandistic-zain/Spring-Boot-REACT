@@ -31,24 +31,25 @@ const Skills = () => {
   return (
     <>
       <section className="skill" id="skills">
-        <Container className="mt-4">
+        <Container>
           <Row>
             <Col>
-              <div className="skill__content text-center">
+              <div className="skill__content text-center pt-2 pb-2">
                 <h2>Skills</h2>
-                <p>Here are some of the skills I have</p>
+                <h4>Here are some of the skills I have</h4>
               </div>
               <Carousel
                 responsive={responsive}
                 infinite={true}
-                className="skill-slider text-center"
+                className="skill-slider text-center
+                mt-5"
               >
-                <div className="item">
+                <div className="item mt-3 ">
                   <img src={skill1} alt="" />
                   <h3 className="mt-3 fw-bold">HTML</h3>
                   <p>HTML is a markup language used to create web pages</p>
                 </div>
-                <div className="item">
+                <div className="item mt-3">
                   <img src={skill3} alt="" />
                   <h3 className="mt-3 fw-bold">CSS</h3>
                   <p>
@@ -56,7 +57,7 @@ const Skills = () => {
                     presentation of a document written in HTML or XML
                   </p>
                 </div>
-                <div className="item">
+                <div className="item mt-3">
                   <img src={skill2} alt="" />
                   <h3 className="mt-3 fw-bold">JavaScript</h3>
                   <p>
@@ -64,7 +65,7 @@ const Skills = () => {
                     implement complex things on web pages
                   </p>
                 </div>
-                <div className="item">
+                <div className="item mt-3">
                   <img src={skill2} alt="" />
                   <h3 className="mt-3 fw-bold">React JS</h3>
                   <p>
@@ -72,7 +73,7 @@ const Skills = () => {
                     interfaces
                   </p>
                 </div>
-                <div className="item">
+                <div className="item mt-3">
                   <img src={skill2} alt="" />
                   <h3 className="mt-3 fw-bold">BootStrap</h3>
                   <p>
@@ -80,7 +81,7 @@ const Skills = () => {
                     at responsive, mobile-first front-end web development
                   </p>
                 </div>
-                <div className="item">
+                <div className="item mt-3">
                   <img src={skill3} alt="" />
                   <h3 className="mt-3 fw-bold">Java</h3>
                   <p>
@@ -89,7 +90,7 @@ const Skills = () => {
                     implementation dependencies as possible
                   </p>
                 </div>
-                <div className="item">
+                <div className="item mt-3">
                   <img src={skill2} alt="" />
                   <h3 className="mt-3 fw-bold">Spring Boot</h3>
                   <p>
@@ -97,7 +98,7 @@ const Skills = () => {
                     create a microservice
                   </p>
                 </div>
-                <div className="item">
+                <div className="item mt-3">
                   <img src={skill2} alt="" />
                   <h3 className="mt-3 fw-bold">MySQL</h3>
                   <p>
@@ -105,7 +106,7 @@ const Skills = () => {
                     system
                   </p>
                 </div>
-                <div className="item">
+                <div className="item mt-3 ">
                   <img src={skill1} alt="" />
                   <h3 className="mt-3 fw-bold">Git-GitHub</h3>
                   <p>
