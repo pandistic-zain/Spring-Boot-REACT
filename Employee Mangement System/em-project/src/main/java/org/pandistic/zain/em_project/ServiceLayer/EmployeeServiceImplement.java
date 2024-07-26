@@ -65,7 +65,7 @@ public class EmployeeServiceImplement implements EmployeeService {
 
     @Override
     public List<Employees> FindByName(String name) {
-        List<EmployeeEntity> employeeEntities = employeeRepository.findByName(name);
+        List<EmployeeEntity> employeeEntities = employeeRepository.findByNameContaining(name);
         List<Employees> employees = new ArrayList<>();
         for (EmployeeEntity employeeEntity : employeeEntities) {
             Employees employee = new Employees();
