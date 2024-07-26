@@ -6,6 +6,8 @@ import colorsharp from "../Assets/images/color-sharp.png"
 import skill1 from "../Assets/images/meter1.svg"
 import skill2 from "../Assets/images/meter2.svg"
 import skill3 from "../Assets/images/meter3.svg"
+
+
 const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -47,7 +49,7 @@ const Skills = () => {
                   <p>HTML is a markup language used to create web pages</p>
                 </div>
                 <div className="item">
-                  <img src={skill2} alt="" />
+                  <img src={skill3} alt="" />
                   <h3 className="mt-3 fw-bold">CSS</h3>
                   <p>
                     CSS is a stylesheet language used to describe the
@@ -55,7 +57,7 @@ const Skills = () => {
                   </p>
                 </div>
                 <div className="item">
-                  <img src={skill3} alt="" />
+                  <img src={skill2} alt="" />
                   <h3 className="mt-3 fw-bold">JavaScript</h3>
                   <p>
                     JavaScript is a programming language that allows you to
@@ -71,7 +73,7 @@ const Skills = () => {
                   </p>
                 </div>
                 <div className="item">
-                  <img src={skill1} alt="" />
+                  <img src={skill2} alt="" />
                   <h3 className="mt-3 fw-bold">BootStrap</h3>
                   <p>
                     Bootstrap is a free and open-source CSS framework directed
@@ -88,7 +90,7 @@ const Skills = () => {
                   </p>
                 </div>
                 <div className="item">
-                  <img src={skill1} alt="" />
+                  <img src={skill2} alt="" />
                   <h3 className="mt-3 fw-bold">Spring Boot</h3>
                   <p>
                     Spring Boot is an open-source Java-based framework used to
