@@ -6,6 +6,7 @@ import Loader from "./Components/Loader";
 import FrontPage from "./Components/FrontPage";
 import AddEmployee from "./Components/AddEmployee";
 import UpdateEmployee from "./Components/UpdateEmployee";
+import SearchedEmployee from "./Components/SearchedEmployee";
  
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/" element =  {<FrontPage/>}></Route>
           <Route path ="/addemployee" element  = {<AddEmployee/>}></Route>
           <Route path ="/updateemployee/:id" element  = {<UpdateEmployee/>}></Route>
+          <Route path ="/search?name=/:name" element  = {<SearchedEmployee/>}></Route>
         </Routes>
 
           

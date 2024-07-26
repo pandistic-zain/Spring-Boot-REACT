@@ -25,6 +25,7 @@ export default function Tables() {
   const navigate = useNavigate();
 
   const handleEditClick = (e, id) => {
+    e.preventDefault();
     navigate(`/updateemployee/${id}`);
   };
 
