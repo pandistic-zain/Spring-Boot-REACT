@@ -11,10 +11,9 @@ export default function Banner() {
   const [index, setIndex] = useState(1);
   const toRotate = [
     "Web Developer",
-    "Web Designer",
-    "UI/UX Designer",
     "Frontend Developer",
     "Backend Developer",
+    "Java Web Developer"
   ];
   const period = 2000;
   useEffect(() => {
