@@ -10,6 +10,7 @@ import insta from "../Assets/images/nav-icon3.svg";
 export default function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [isToggled, setIsToggled] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -28,6 +29,10 @@ export default function NavBar() {
   function onUpdateActiveLink(value) {
     setActiveLink(value);
   }
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+  };
+
 
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -35,10 +40,20 @@ export default function NavBar() {
         <Navbar.Brand href="#home">
           <img src={logo} alt="Logo" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toggler-icon"></span>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
+        {/* Custum Toggle Button */}
+        <div
+            onClick={handleToggle}
+            className={`toggle ${isToggled ? "open" : ""}`}
+          >
+            <div className="bars" id="bar1"></div>
+            <div className="bars" id="bar2"></div>
+            <div className="bars" id="bar3"></div>
+          </div>
+
+          <Navbar.Collapse
+            id="navbarScroll"
+            className={isToggled ? "show" : ""}
+          >
           <Nav className="me-auto">
             <Nav.Link
               href="#home"
