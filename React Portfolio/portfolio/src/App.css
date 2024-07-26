@@ -48,24 +48,27 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 9999;
-  transition: 0.3s ease-in-out;
+  z-index: 1000; /* Ensure navbar is above other content */
+  transition: background-color 0.3s ease-in-out;
+  background-color: transparent; /* Transparent to show the banner background */
 }
 
+/* When scrolled, change background color of navbar */
 .navbar.scrolled {
-  background-color: #121212;
+  background-color: #121212; /* Solid background color when scrolled */
   padding: 0;
 }
 
+/* Ensure Navbar content is properly aligned */
 .navbar-brand img {
-  width: 120px; 
-  height: auto; 
-  padding: 5px; 
-  transition: transform 0.3s ease-in-out; 
+  width: 120px;
+  height: auto;
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .navbar-brand img:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .navbar-link {
@@ -169,6 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-me:hover::before {
   width: 100%;
 }
+
 .custom-navbar {
   background-color: transparent;
   display: flex;
@@ -176,6 +180,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   box-sizing: border-box;
 }
+
 /* Custom Toggle Button */
 .toggle {
   position: relative;
@@ -218,13 +223,14 @@ h1, h2, h3, h4, h5, h6 {
 .toggle.open {
   transform: rotate(-90deg);
 }
+
 /* Media query to show custom toggler only on smaller screens */
 @media (max-width: 991px) {
   .toggle {
-    display: flex; 
+    display: flex;
   }
   .navbar-toggler {
-    display: none; 
+    display: none;
   }
 }
 
@@ -232,14 +238,87 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: flex-start;
 }
 /* Navbar Styling Finish */
-
-
+/* ----------------------------------------------------------------------------------------------------------- */
 /* Banner Styling Start */
-.banner{
+.banner {
   margin-top: 0;
-  padding: 260px 0px 100px 0px;
+  padding: 100px 0px 100px 0px; 
+  z-index: 0; 
+}
+
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(170,54,124,0.5) -5.91, rgba(74,47,189,0.5) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.banner h1 {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.banner p {
+  font-size: 18px;
+  color: #b8b8b8;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+
+.banner button {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all .2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: transparent;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 23px;
+  margin-top: 60px;
+  color: #fff;
+}
+
+.banner button:hover {
+  background: rgba(170,54,124);
+}
+
+.banner button > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out;
+  fill: #fff;
+  border-color: #fff;
+}
+
+.banner button:hover svg {
+  transform: translateX(5px);
+}
+
+.banner button:active {
+  transform: scale(0.95);
+}
+
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+/* Home Container */
+.home-container{
   background-image: url('./Assets/images/banner-bg.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.app {
+  display: flex;
+  text-align: center;
 }
