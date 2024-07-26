@@ -56,7 +56,7 @@ export default function NavBar() {
           >
           <Nav className="me-auto">
             <Nav.Link
-              href="#home"
+              href="#"
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
