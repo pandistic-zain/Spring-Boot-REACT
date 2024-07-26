@@ -42,7 +42,7 @@ const Skills = () => {
                 responsive={responsive}
                 infinite={true}
                 className="skill-slider text-center
-                mt-5"
+                mt-5 mb-5"
               >
                 <div className="item mt-3 ">
                   <img src={skill1} alt="" />
