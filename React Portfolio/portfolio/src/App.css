@@ -535,7 +535,7 @@ h6 {
 /* Projects Css Finish */
 
 /* ------------------------------------------------------------------------------------------------------------------- */
-
+/* Feedback Css Starts */
 .feedbackshower {
   display: flex;
   flex-wrap: wrap;
@@ -603,14 +603,22 @@ h6 {
 }
 
 .feedbackshower .card-front {
-  background-color: #6A2C70;
-  color: #fff;
+  background-color: linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(74, 47, 189, 0.5) 100%
+  );
+  color: #fff !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  border: 10px solid #6A2C70;
+  border: 10px solid linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(74, 47, 189, 0.5) 100%
+  );
   border-radius: 10px;
   font-size: 20px;
   transform: rotateY(0deg);
@@ -622,17 +630,29 @@ h6 {
 }
 
 .feedbackshower .card-back {
-  background-color: #F08A5D;
-  color: #fff;
+  background-color: #fff;
+  color: linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(74, 47, 189, 0.5) 100%
+  );
   display: flex;
   align-items: center;
-  border: 10px solid #F08A5D;
   border-radius: 10px;
   justify-content: center;
+  border: 10px solid linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(74, 47, 189, 0.5) 100%
+  );
   font-size: 24px;
   transform: rotateY(180deg);
 }
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* Feedback Css Ends */
 
+
+/* ------------------------------------------------------------------------------------------------------------------- */
 /* Styling for Footer */
 .footer-container {
   position: relative;
