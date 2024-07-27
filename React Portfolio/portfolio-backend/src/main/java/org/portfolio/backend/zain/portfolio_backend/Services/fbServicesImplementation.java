@@ -8,7 +8,9 @@ import org.portfolio.backend.zain.portfolio_backend.DAO.Entity.FeedbackEntity;
 import org.portfolio.backend.zain.portfolio_backend.DAO.Repository.FeedbackRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class fbServicesImplementation implements fbServices {
     @Autowired
     FeedbackRepository feedbackRepository;
