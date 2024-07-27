@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./FeedbackPage.css";
 import Footer from "./Footer";
+import colorsharp from "../Assets/images/color-sharp.png"
 const FeedbackPage = () => {
   const [feedback, setFeedback] = useState("");
   const [email, setEmail] = useState("");
@@ -81,8 +82,11 @@ const FeedbackPage = () => {
               </Button>
             </Form>
           </Col>
+
         </Row>
+       
       </Container>
+      <img className="background-image-left" src={colorsharp} alt="" />
       <Footer />
     </>
   );

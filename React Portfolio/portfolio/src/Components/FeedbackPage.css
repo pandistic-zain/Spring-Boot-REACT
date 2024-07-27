@@ -180,3 +180,10 @@
     -9px -9px 33px rgba(74, 47, 189, 0.9);
   transform: translateY(-2px);
 }
+.background-image-left {
+  top: -15%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
