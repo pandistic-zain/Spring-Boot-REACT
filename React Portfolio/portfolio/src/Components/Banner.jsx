@@ -8,7 +8,6 @@ export default function Banner() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
   const toRotate = [
     "Web Developer",
     "Frontend Developer",
@@ -60,7 +59,7 @@ export default function Banner() {
                 efficient solutions. From algorithms to software architectures,
                 I focus on performance and maintainability to deliver reliable,
                 scalable applications that exceed user expectations. Let's build
-                lasting software together! 💻�
+                lasting software together! 💻
               </p>
               <button onClick={() => console.log("Lets Connect")}>
                 <span> Let's Connect</span>
