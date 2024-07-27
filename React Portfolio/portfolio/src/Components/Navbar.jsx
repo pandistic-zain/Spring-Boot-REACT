@@ -6,11 +6,13 @@ import logo from "../Assets/images/logo.svg";
 import linkedin from "../Assets/images/nav-icon1.svg";
 import facebook from "../Assets/images/nav-icon2.svg";
 import insta from "../Assets/images/nav-icon3.svg";
+import { useNavigate,Link } from "react-router-dom";
 
 export default function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   const [isToggled, setIsToggled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => {
@@ -85,20 +87,21 @@ export default function NavBar() {
           </Nav>
           <span className="navbar-text">
             <div className="social-icons">
-              <a href="#">
+              <Link to="https://www.linkedin.com/in/zain-ul-abideen-b9215a283/">
                 <img src={linkedin} alt="Icon1" />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="https://web.facebook.com/profile.php?id=100079905174484">
                 <img src={facebook} alt="Icon2" />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="https://www.instagram.com/fit._.zain/">
                 <img src={insta} alt="Icon3" />
-              </a>
+              </Link>
             </div>
             <button
               className="contact-me"
               onClick={() => {
                 console.log("Contact Me Form");
+                navigate(`/letsconnect`)
               }}
             >
               <span>Lets Connect</span>

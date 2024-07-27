@@ -1,0 +1,91 @@
+import React, { useState } from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import "./FeedbackPage.css";
+import Footer from "./Footer";
+const FeedbackPage = () => {
+  const [feedback, setFeedback] = useState("");
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle the feedback submission logic here
+    console.log("Feedback:", feedback);
+    console.log("Email:", email);
+    console.log("Name:", name);
+    // Reset form
+    setFeedback("");
+    setEmail("");
+    setName("");
+  };
+
+  return (
+    <>
+      <Container className="d-flex justify-content-center align-items-center vh-100">
+        <Row className="form-container">
+          <Col md={8}>
+            <div className="d-flex justify-content-center align-items-center title">
+              <button >
+                <svg
+                  height="16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  viewBox="0 0 1024 1024"
+                >
+                  <path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path>
+                </svg>
+                <span>Back</span>
+              </button>
+              <h1 className="d-flex justify-content-center ml-5">Feedback Page</h1>
+            </div>
+
+            <Form onSubmit={handleSubmit} className="form">
+              <Form.Group controlId="formName" className="form-group">
+                <Form.Label>Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter your name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formEmail" className="form-group">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formFeedback" className="form-group">
+                <Form.Label>Feedback</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  placeholder="Enter your feedback"
+                  value={feedback}
+                  onChange={(e) => setFeedback(e.target.value)}
+                />
+              </Form.Group>
+
+              <Button
+                variant="primary"
+                type="submit"
+                className="d-flex justify-content-center form-submit-btn"
+              >
+                Submit
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
+      <Footer />
+    </>
+  );
+};
+
+export default FeedbackPage;

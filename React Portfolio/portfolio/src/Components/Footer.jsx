@@ -27,7 +27,7 @@ const Footer = () => {
             <h5>Follow Me</h5>
             <ul className="list-unstyled example-2">
               <li className="icon-content">
-                 <Link to="https://linkedin.com/" aria-label="LinkedIn" data-social="linkedin">
+                 <Link to="https://www.linkedin.com/in/zain-ul-abideen-b9215a283/" aria-label="LinkedIn" data-social="linkedin">
                   <div className="filled"></div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -46,8 +46,8 @@ const Footer = () => {
                 <div className="tooltip">LinkedIn</div>
               </li>
               <li className="icon-content">
-                <a
-                  href="https://www.github.com/"
+                <Link
+                  to="https://github.com/pandistic-zain?tab=repositories"
                   aria-label="GitHub"
                   data-social="github"
                 >
@@ -65,12 +65,12 @@ const Footer = () => {
                       fill="currentColor"
                     ></path>
                   </svg>
-                </a>
+                </Link>
                 <div className="tooltip">GitHub</div>
               </li>
               <li className="icon-content">
-                <a
-                  href="https://www.instagram.com/"
+                <Link
+                  to="https://www.instagram.com/fit._.zain/"
                   aria-label="Instagram"
                   data-social="instagram"
                 >
@@ -88,12 +88,12 @@ const Footer = () => {
                       fill="currentColor"
                     ></path>
                   </svg>
-                </a>
+                </Link>
                 <div className="tooltip">Instagram</div>
               </li>
               <li className="icon-content">
-                <a
-                  href="https://youtube.com/"
+                <Link
+                  to="https://www.youtube.com/feed/playlists"
                   aria-label="Youtube"
                   data-social="youtube"
                 >
@@ -111,7 +111,7 @@ const Footer = () => {
                       fill="currentColor"
                     ></path>
                   </svg>
-                </a>
+                </Link>
                 <div className="tooltip">Youtube</div>
               </li>
             </ul>
