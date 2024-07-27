@@ -180,14 +180,14 @@
     -9px -9px 33px rgba(74, 47, 189, 0.9);
   transform: translateY(-2px);
 }
-.background-image-left {
+.bg-image-left {
   top: -15%;
   position: absolute;
   bottom: 0;
   width: 40%;
   z-index: -4;
 }
-.background-image-right {
+.bg-image-right {
   position: absolute;
   right: 0;
   top: 18%;

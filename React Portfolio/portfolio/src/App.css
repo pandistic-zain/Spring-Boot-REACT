@@ -529,6 +529,7 @@ h6 {
   top: 68%;
   bottom: 0;
   width: 35%;
+  z-index: -6;
 }
 /* Projects Css Finish */
 

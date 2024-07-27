@@ -89,8 +89,8 @@ const FeedbackPage = () => {
         </Row>
        
       </Container>
-      <img className="background-image-left" src={colorsharp} alt="" />
-      <img className="background-image-right" src={colorsharp2} alt="" />
+      <img className="bg-image-left" src={colorsharp} alt="" />
+      <img className="bg-image-right" src={colorsharp2} alt="" />
       <Footer />
     </>
   );
