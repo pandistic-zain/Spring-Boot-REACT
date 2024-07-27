@@ -22,7 +22,6 @@ public class fbServicesImplementation implements fbServices {
         feedbackRepository.save(feedbackEntity);
         return "Save Success";
     }
-
     @Override
     public List<Feedback> GetFeedback() {
         List<FeedbackEntity> feedbackentity = feedbackRepository.findAll();

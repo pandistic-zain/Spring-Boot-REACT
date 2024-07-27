@@ -16,13 +16,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 @CrossOrigin("http://localhost:3000")
 public class FeedbackController {
     @Autowired
-    fbServices FbService;
+    fbServices fbService;
     @GetMapping("/letsconnect")
     public List<Feedback> getAllFeedbacks() {
-        return FbService.GetFeedback();
+        return fbService.GetFeedback();
     }
     @PostMapping("/letsconnect")
-    public String postFeedback(@RequestBody Feedback fb){
-        return FbService.postFeedback(fb);
+    public String postFeedback(@RequestBody Feedback fb) {
+        String response = fbService.postFeedback(fb);
+        return response;
     }
 }
