@@ -37,15 +37,86 @@ const Projects = () => {
               className="project-slider text-center
                 mt-5 mb-5"
             >
-              <div className="card d-flex justify-content-center mt-5">
-                <div className="card-content">
-                  <img src= {projectimg1} alt="" />
-                  <p className="card-title">Card hover effect</p>
-                  <p className="card-para">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
+              <Carousel.Item>
+                <div className="card d-flex justify-content-center mt-5">
+                  <div className="card-content">
+                    <img src={projectimg1} alt="" />
+                    <p className="card-title">Gym Project (G-7 Fitness Club)</p>
+                    <p className="card-para">
+                      Developed a secure website for a gym owner which provides
+                      facilities to owner as well as to client using HTML, CSS,
+                      JavaScript
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="card d-flex justify-content-center mt-5">
+                  <div className="card-content">
+                    <img src={projectimg1} alt="" />
+                    <p className="card-title">My Own Portfolio</p>
+                    <p className="card-para">
+                      Created my own portfolio Using HTML, CSS, JavaScript
+                      Keeping the responsiveness in mind using Grids And my more
+                      Functionalities
+                    </p>
+                  </div>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="card d-flex justify-content-center mt-5">
+                  <div className="card-content">
+                    <img src={projectimg1} alt="" />
+                    <p className="card-title">Store Management System</p>
+                    <p className="card-para">
+                      Created a Store Management System using Java Adding the
+                      Functionality of MySQL Database, File Handling, File
+                      Serialization, Deserialization, Datagram Sockets and Many
+                      more
+                    </p>
+                  </div>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="card d-flex justify-content-center mt-5">
+                  <div className="card-content">
+                    <img src={projectimg1} alt="" />
+                    <p className="card-title">DSA Project (Using C++)</p>
+                    <p className="card-para">
+                      My DSA Project Using C++ Named contact book merges
+                      LinkedLists, Stacks, and Queues flawlessly, embodying OOP
+                      and DSA principles, securing an A+ grade In the Course.
+                    </p>
+                  </div>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="card d-flex justify-content-center mt-5">
+                  <div className="card-content">
+                    <img src={projectimg1} alt="" />
+                    <p className="card-title">React Portfolio</p>
+                    <p className="card-para">
+                      Built a dynamic and responsive portfolio using React and
+                      Bootstrap, showcasing my skills in modern web development
+                      and ensuring optimal user experience across all devices.
+                    </p>
+                  </div>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="card d-flex justify-content-center mt-5">
+                  <div className="card-content">
+                    <img src={projectimg1} alt="" />
+                    <p className="card-title">C++ Compiler</p>
+                    <p className="card-para">
+                      Leveraged my problem-solving skills to develop a C++
+                      compiler, focusing on building a robust Lexical Analyzer,
+                      Syntax Analyzer, and Semantic Analyzer for efficient code
+                      processing and error detection.
+                    </p>
+                  </div>
+                </div>
+              </Carousel.Item>
             </Carousel>
           </Col>
         </Row>

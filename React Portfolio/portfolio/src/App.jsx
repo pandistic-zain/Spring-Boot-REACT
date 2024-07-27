@@ -4,6 +4,7 @@ import Banner from "./Components/Banner.jsx";
 import Home from "./Components/Home.jsx";
 import Skills from "./Components/Skills.jsx";
 import Projects from "./Components/Projects.jsx";
+import Footer from "./Components/Footer.jsx";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
     <Home />
     <Skills/>
     <Projects />
+    <Footer />
     </>
   );
 }
