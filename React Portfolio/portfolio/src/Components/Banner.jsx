@@ -1,9 +1,10 @@
 import { React, useState, useEffect } from "react";
 import "../App.css";
 import { Container, Row, Col } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
+import { useNavigate } from "react-router-dom";
 import headerImg from "../Assets/images/header-img.svg";
 export default function Banner() {
+  const navigate = useNavigate();
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
@@ -61,7 +62,7 @@ export default function Banner() {
                 scalable applications that exceed user expectations. Let's build
                 lasting software together! 💻
               </p>
-              <button onClick={() => console.log("Lets Connect")}>
+              <button onClick={() => navigate("/letsconnect")}>
                 <span> Let's Connect</span>
                 <svg
                   width="34"

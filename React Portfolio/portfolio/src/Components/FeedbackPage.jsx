@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import "./FeedbackPage.css";
 import Footer from "./Footer";
 import colorsharp from "../Assets/images/color-sharp.png"
@@ -7,6 +8,7 @@ const FeedbackPage = () => {
   const [feedback, setFeedback] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +28,7 @@ const FeedbackPage = () => {
         <Row className="form-container">
           <Col md={8}>
             <div className="d-flex justify-content-center align-items-center title">
-              <button >
+              <button  onClick={()=>{navigate("/")}}>
                 <svg
                   height="16"
                   width="16"
@@ -41,7 +43,7 @@ const FeedbackPage = () => {
               <h1 className="d-flex justify-content-center ml-5">Feedback Page</h1>
             </div>
 
-            <Form onSubmit={handleSubmit} className="form">
+            <Form onSubmit={handleSubmit} className="form mt-5">
               <Form.Group controlId="formName" className="form-group">
                 <Form.Label>Name</Form.Label>
                 <Form.Control
