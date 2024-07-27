@@ -24,16 +24,16 @@ public class FeedbackController {
     @PostMapping("/letsconnect")
     public String postFeedback(@RequestBody Feedback fb) {
         // Debugging outputs
-        System.out.println("Received Feedback:");
-        System.out.println("ID: " + fb.getId());
-        System.out.println("Name: " + fb.getName());
-        System.out.println("Email: " + fb.getEmail());
-        System.out.println("Message: " + fb.getMessage());
+        // System.out.println("Received Feedback:");
+        // System.out.println("ID: " + fb.getId());
+        // System.out.println("Name: " + fb.getName());
+        // System.out.println("Email: " + fb.getEmail());
+        // System.out.println("Message: " + fb.getMessage());
 
         String response = fbService.postFeedback(fb);
 
         // Debugging output for response
-        System.out.println("Response from service: " + response);
+        // System.out.println("Response from service: " + response);
 
         return response;
     }
