@@ -18,7 +18,7 @@ public class FeedbackEntity {
 
     private String name;
     private String email;
-   @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "LONGTEXT")
     private String message;
     
 }

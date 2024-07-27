@@ -19,9 +19,15 @@ public class fbServicesImplementation implements fbServices {
     public String postFeedback(Feedback feedback) {
         FeedbackEntity feedbackEntity = new FeedbackEntity();
         BeanUtils.copyProperties(feedback, feedbackEntity);
+        String message = feedback.getMessage();
+        if (message.length() > 100) {
+            message = message.substring(0, 100);
+        }
+        feedback.setMessage(message);
         feedbackRepository.save(feedbackEntity);
         return "Save Success";
     }
+
     @Override
     public List<Feedback> GetFeedback() {
         List<FeedbackEntity> feedbackentity = feedbackRepository.findAll();
