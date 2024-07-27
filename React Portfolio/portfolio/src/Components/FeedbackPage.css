@@ -187,3 +187,11 @@
   width: 40%;
   z-index: -4;
 }
+.background-image-right {
+  position: absolute;
+  right: 0;
+  top: 18%;
+  bottom: 0;
+  width: 35%;
+  z-index: -5;
+}

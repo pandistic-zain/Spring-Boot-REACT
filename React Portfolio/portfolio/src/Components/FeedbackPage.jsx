@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./FeedbackPage.css";
 import Footer from "./Footer";
 import colorsharp from "../Assets/images/color-sharp.png"
+import colorsharp2 from "../Assets/images/color-sharp2.png"
 const FeedbackPage = () => {
   const [feedback, setFeedback] = useState("");
   const [email, setEmail] = useState("");
@@ -89,6 +90,7 @@ const FeedbackPage = () => {
        
       </Container>
       <img className="background-image-left" src={colorsharp} alt="" />
+      <img className="background-image-right" src={colorsharp2} alt="" />
       <Footer />
     </>
   );
