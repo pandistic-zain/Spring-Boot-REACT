@@ -77,6 +77,7 @@ h6 {
 
 .navbar-link {
   font-weight: 400;
+  font-size: 20px !important;
   color: #fff !important;
   letter-spacing: 0.8px;
   padding: 0 20px !important;
@@ -535,58 +536,103 @@ h6 {
 
 /* ------------------------------------------------------------------------------------------------------------------- */
 
-/* Styling for FeedbackShower */
-.feedbackshower{
-  .card {
-    width: 300px;
-    height: 200px;
-    perspective: 1000px;
-  }
-  
-  .card-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.999s;
-  }
-  
-  .card:hover .card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .card-front,
-  .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  
-  .card-front {
-    background-color: #6A2C70;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    border: 10px solid #6A2C70;
-    border-radius: 10px;
-    justify-content: center;
-    font-size: 24px;
-    transform: rotateY(0deg);
-  }
-  
-  .card-back {
-    background-color: #F08A5D;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    border: 10px solid #F08A5D;
-    border-radius: 10px;
-    justify-content: center;
-    font-size: 24px;
-    transform: rotateY(180deg);
-  }
+.feedbackshower {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
+.feedback-content{
+  background-color: #ffffff;
+  border-radius: 65px;
+  margin-top: 7px;
+  box-shadow: 10px 10px 20px 5px rgba(170, 54, 124, 0.7),
+    -10px -10px 20px 5px rgba(74, 47, 189, 0.7);
+}
+.feedbackshower h2 {
+  color: #000000;
+  font-size: 55px;
+  font-weight: 800;
+}
+.feedbackshower h3 {
+  color: #000000;
+  font-size: 45px;
+  font-weight: 700;
+}
+.feedbackshower h4 {
+  font-size: 25px;
+  color: #000000;
+  font-weight: 600;
+}
+.feedbackshower p {
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+}
+
+.feedbackshower .card {
+  display: flex;
+  min-width: 300px;
+  min-height: 200px;
+  width: auto;
+  height: auto;
+  perspective: 1000px;
+  margin: 10px;
+  flex-grow: 1;
+}
+
+.feedbackshower .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.feedbackshower .card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.feedbackshower .card-front,
+.feedbackshower .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.feedbackshower .card-front {
+  background-color: #6A2C70;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 10px solid #6A2C70;
+  border-radius: 10px;
+  font-size: 20px;
+  transform: rotateY(0deg);
+}
+
+.feedbackshower .card-front h3,
+.feedbackshower .card-front h4 {
+  margin: 5px 0;
+}
+
+.feedbackshower .card-back {
+  background-color: #F08A5D;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #F08A5D;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(180deg);
+}
+
 /* Styling for Footer */
 .footer-container {
   position: relative;
