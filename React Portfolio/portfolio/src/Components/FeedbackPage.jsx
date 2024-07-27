@@ -80,6 +80,7 @@ const FeedbackPage = () => {
                 variant="primary"
                 type="submit"
                 className="d-flex justify-content-center form-submit-btn"
+                onSubmit={handleSubmit}
               >
                 Submit
               </Button>

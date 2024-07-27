@@ -1,5 +1,6 @@
 package org.portfolio.backend.zain.portfolio_backend.DAO.Entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,6 +18,7 @@ public class FeedbackEntity {
 
     private String name;
     private String email;
+   @Column(columnDefinition = "TEXT")
     private String message;
     
 }
