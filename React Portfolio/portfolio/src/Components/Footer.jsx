@@ -8,14 +8,14 @@ const Footer = () => {
       <Container>
         <Row>
           <Col md={4} className="mb-3">
-            <h5>About Us</h5>
+            <h5>About Me</h5>
             <p>
               I am a passionate Java web developer with experience in creating
               dynamic and responsive websites using the latest technologies.
             </p>
           </Col>
           <Col md={4} className="mb-3 ">
-            <h5>Contact Us</h5>
+            <h5>Contact Me</h5>
             <ul className="list-unstyled example-2 d-flex flex-column">
               <li>Email: pandistic.zain@gmail.com</li>
               <li>Phone: +92 3446558870</li>
@@ -23,7 +23,7 @@ const Footer = () => {
             </ul>
           </Col>
           <Col md={4} className="mb-3">
-            <h5>Follow Us</h5>
+            <h5>Follow Me</h5>
             <ul className="list-unstyled example-2">
             <li className="icon-content">
     <a

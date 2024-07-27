@@ -13,7 +13,7 @@ export default function Banner() {
     "Web Developer",
     "Frontend Developer",
     "Backend Developer",
-    "Java Web Developer"
+    "Java Web Developer",
   ];
   const period = 2000;
   useEffect(() => {
@@ -56,10 +56,11 @@ export default function Banner() {
                 {`Hi I'm `} <span className="wrap"> {text}</span>
               </h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Labore, accusamus? Illo, dolorum molestiae iste nam sunt
-                quaerat, autem, obcaecati dolor vel sit in ea? Molestias aliquam
-                beatae placeat consectetur voluptas.
+                Hello! I'm a Java developer passionate about creating elegant,
+                efficient solutions. From algorithms to software architectures,
+                I focus on performance and maintainability to deliver reliable,
+                scalable applications that exceed user expectations. Let's build
+                lasting software together! 💻�
               </p>
               <button onClick={() => console.log("Lets Connect")}>
                 <span> Let's Connect</span>
