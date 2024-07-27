@@ -33,10 +33,10 @@
 
 .form-container button:active {
   -o-transform: scale(0.95);
-  -webkit-transform: scale(0.95); /* Chrome, Safari, Opera */
-  -moz-transform: scale(0.95); /* Firefox */
-  -ms-transform: scale(0.95); /* Internet Explorer 9 */
-  transform: scale(0.95); /* Opera */
+  -webkit-transform: scale(0.95); 
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95); 
+  transform: scale(0.95); 
 }
 
 .form-container .form {
