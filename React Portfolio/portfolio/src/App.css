@@ -571,6 +571,11 @@ h6 {
   letter-spacing: 0.8px;
   line-height: 1.5em;
 }
+.feedbackshower .alert{
+  max-width: 500px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the alert */
+}
+
 
 .feedbackshower .card {
   display: flex;

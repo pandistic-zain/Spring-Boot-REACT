@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Spinner, Alert } from "react-bootstrap";
 import FeedbackServices from "../Services/FeedbackServices";
-import "../App.css"; 
+import "../App.css";
 
 const FeedbackShower = () => {
   const [feedbacks, setFeedbacks] = useState([]);
@@ -35,7 +35,9 @@ const FeedbackShower = () => {
               {loading ? (
                 <Spinner animation="border" variant="primary" />
               ) : error ? (
-                <Alert className="px-5" variant="danger">{error}</Alert>
+                <Alert variant="danger" className="alert">
+                  {error}
+                </Alert>
               ) : (
                 <div className="d-flex flex-wrap justify-content-center">
                   {feedbacks.map((feedback) => (
