@@ -35,7 +35,7 @@ const FeedbackShower = () => {
               {loading ? (
                 <Spinner animation="border" variant="primary" />
               ) : error ? (
-                <Alert variant="danger">{error}</Alert>
+                <Alert className="px-5" variant="danger">{error}</Alert>
               ) : (
                 <div className="d-flex flex-wrap justify-content-center">
                   {feedbacks.map((feedback) => (

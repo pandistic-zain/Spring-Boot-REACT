@@ -21,8 +21,8 @@ public class fbServicesImplementation implements fbServices {
         BeanUtils.copyProperties(feedback, feedbackEntity);
     
         String message = feedback.getMessage();
-        if (message.length() > 45) {
-            feedbackEntity.setMessage(message.substring(0, 45));  // Set truncated message directly on entity
+        if (message.length() > 180) {
+            feedbackEntity.setMessage(message.substring(0, 180));  // Set truncated message directly on entity
         } else {
             feedbackEntity.setMessage(message);
         }
