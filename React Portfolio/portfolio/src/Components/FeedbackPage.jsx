@@ -3,24 +3,42 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./FeedbackPage.css";
 import Footer from "./Footer";
-import colorsharp from "../Assets/images/color-sharp.png"
-import colorsharp2 from "../Assets/images/color-sharp2.png"
+import colorsharp from "../Assets/images/color-sharp.png";
+import colorsharp2 from "../Assets/images/color-sharp2.png";
+import FeedbackServices from "../Services/FeedbackServices"
 const FeedbackPage = () => {
-  const [feedback, setFeedback] = useState("");
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
+  const [feedback, setFeedback] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
   const navigate = useNavigate();
+
+  const handleOnChange = (e) => {
+    const { name, value } = e.target;
+    setFeedback({ ...feedback, [name]: value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    FeedbackServices.postFeedback(feedback)
+    .then((Response) =>{
+      console.log(Response.data);
+      navigate("/");
+    })
+    .catch((error) =>{
+      console.log(error);
+    });
     // Handle the feedback submission logic here
-    console.log("Feedback:", feedback);
-    console.log("Email:", email);
-    console.log("Name:", name);
+    console.log("Feedback:", feedback.message);
+    console.log("Email:", feedback.email);
+    console.log("Name:", feedback.name);
     // Reset form
-    setFeedback("");
-    setEmail("");
-    setName("");
+    setFeedback({
+      name: "",
+      email: "",
+      message: ""
+    });
   };
 
   return (
@@ -29,7 +47,7 @@ const FeedbackPage = () => {
         <Row className="form-container">
           <Col md={8}>
             <div className="d-flex justify-content-center align-items-center title">
-              <button  onClick={()=>{navigate("/")}}>
+              <button onClick={() => { navigate("/") }}>
                 <svg
                   height="16"
                   width="16"
@@ -49,9 +67,10 @@ const FeedbackPage = () => {
                 <Form.Label>Name</Form.Label>
                 <Form.Control
                   type="text"
+                  name="name"
                   placeholder="Enter your name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={feedback.name}
+                  onChange={handleOnChange}
                 />
               </Form.Group>
 
@@ -59,9 +78,10 @@ const FeedbackPage = () => {
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
                   type="email"
+                  name="email"
                   placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={feedback.email}
+                  onChange={handleOnChange}
                 />
               </Form.Group>
 
@@ -70,9 +90,10 @@ const FeedbackPage = () => {
                 <Form.Control
                   as="textarea"
                   rows={3}
+                  name="message"
                   placeholder="Enter your feedback"
-                  value={feedback}
-                  onChange={(e) => setFeedback(e.target.value)}
+                  value={feedback.message}
+                  onChange={handleOnChange}
                 />
               </Form.Group>
 
@@ -80,15 +101,12 @@ const FeedbackPage = () => {
                 variant="primary"
                 type="submit"
                 className="d-flex justify-content-center form-submit-btn"
-                onSubmit={handleSubmit}
               >
                 Submit
               </Button>
             </Form>
           </Col>
-
         </Row>
-       
       </Container>
       <img className="bg-image-left" src={colorsharp} alt="" />
       <img className="bg-image-right" src={colorsharp2} alt="" />

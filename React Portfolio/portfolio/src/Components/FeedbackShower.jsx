@@ -46,7 +46,7 @@ const FeedbackShower = () => {
                           <h4>{feedback.email}</h4>
                         </div>
                         <div className="card-back">
-                          <p>{feedback.message}</p>
+                          <p className=" px-3">{feedback.message}</p>
                         </div>
                       </div>
                     </div>
